@@ -6,16 +6,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { ProductModule } from './products/product.module';
+import { CourseModule } from './courses/course.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
+import { AppNavbarComponent } from './app-navbar.component';
+
+import { AuthGuard } from './route.guard';
+import { AuthService } from './auth.service';
+import { CartComponent } from './cart/cart.component';
+import { AdminComponent } from './admin/admin.component';
+//import { CategoriesComponent } from './courses/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     LoginPageComponent,
-    SignupPageComponent
+    SignupPageComponent,
+    AppNavbarComponent,
+    CartComponent,
+    AdminComponent,
+    //CategoriesComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -25,11 +37,16 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
       { path: 'welcome', component: WelcomeComponent },
       { path: 'login', component:LoginPageComponent},
       { path: 'signUp', component:SignupPageComponent},
+      { path: 'cart',canActivate:[AuthGuard],  component:CartComponent},
+      {path: 'admin',canActivate:[AuthGuard], component:AdminComponent},
+      //{ path: 'logout', component: LogoutComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'} 
+     
     ]),
-    ProductModule
+    CourseModule
   ],
+  providers:[AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,207 @@
+{
+  "signupUsersList": [
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "karen@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "vivek@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "sam@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "harry@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "email": "namitha@gmail.com",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "email": "riya@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "email": "alphindennis2@gmail.com",
+      "password": "Alphin",
+      "id": 8
+    },
+    {
+      "email": "agnes@gmail.com",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 10
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 11
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 12
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 13
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 14
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 15
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 16
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 17
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 18
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 19
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 20
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 21
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 22
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 23
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 24
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 25
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 26
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 27
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 28
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 29
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 30
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 31
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 32
+    },
+    {
+      "email": "alitta@gmail.com",
+      "password": "1234",
+      "id": 33
+    }
+  ],
+  "coursesList": [
+    {
+      "id": 1,
+      "courseName": "Artificial Intelligence",
+      "courseCode": "cst123",
+      "starRating": 3.5,
+      "price": "10",
+      "startDate": "October 13,2023",
+      "imageUrl": "assets/images/ai.jpg"
+    },
+    {
+      "id": 2,
+      "courseName": "Cybersecurity",
+      "courseCode": "cst458",
+      "starRating": 4.3,
+      "price": 12,
+      "startDate": "October 3,2023",
+      "imageUrl": "assets/images/cs.jpeg"
+    },
+    {
+      "id": 3,
+      "courseName": "Data Analytics",
+      "courseCode": "cst789",
+      "starRating": 3.7,
+      "price": "9",
+      "startDate": "September 25,2023",
+      "imageUrl": "assets/images/da.jpg"
+    },
+    {
+      "id": 4,
+      "courseName": "Web Programming",
+      "courseCode": "cst098",
+      "starRating": 3.6,
+      "price": "10",
+      "startDate": "October 10,2023",
+      "imageUrl": "assets/images/web.jpg"
+    }
+  ]
+}

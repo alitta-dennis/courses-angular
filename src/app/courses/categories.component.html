@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+      Categories
+    </div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <!--dropdown-->
+      <div class="form-group row mb-4">
+        <label for="selectCategory" class="text-primary">Select Category</label>
+        <div class="col_md-4">
+          <select class="form-control custom-select" id="selectCategory" [(ngModel)]="idSelected" (change)="onChange()">
+            <option [ngValue]="null">Select Category</option>
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-6">
+        <h4>Courses in {{nameSelected}}</h4>
+      </div>
+    
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Code</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses">
+          <td>{{course.coursename}}</td>
+          <td>{{course.coursecode}}</td>
+          <td>{{course.price | currency:'USD':true:'1.2-2'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+</div>
+</div>

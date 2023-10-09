@@ -1,0 +1,90 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Filter by:</div>
+      <div class="col-md-4">
+        <input type="text"
+               [(ngModel)]="listFilter" />
+      </div>
+    </div>
+    <div class="row"
+         *ngIf="listFilter">
+      <div class="col-md-6">
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table mb-0"
+             *ngIf="courses && courses.length">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-outline-primary btn-sm"
+                      (click)="toggleImage()">
+                {{showImage ? "Hide" : "Show"}} Image
+              </button>
+            </th>
+            <!-- <th>id</th> -->
+            <th>Course Name</th>
+            <th>Code</th>
+            <th>Start Date</th>
+            <th>Price</th>
+            <th>5 Star Rating</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of filteredCourses | paginate:{ itemsPerPage:size,currentPage:current,totalItems:total}">
+            <td>
+              <img *ngIf="showImage && course.imageUrl"
+                   [src]="course.imageUrl"
+                   [title]="course.courseName"
+                   [style.width.px]="imageWidth"
+                   [style.margin.px]="imageMargin"
+                   id="image">
+            </td>
+            <td>
+              <a [routerLink]="['/courses', course.id]">
+                {{ course.courseName }}
+              </a>
+            </td>
+            <!-- <td>{{ course.courseName }}</td> -->
+            <td>{{ course.courseCode }}</td>
+            <td>{{ course.startDate }}</td>
+            <td>{{ course.price | currency:"USD":"symbol":"1.2-2" }}</td>
+            <td>
+              <pm-star [rating]="course.starRating">
+              </pm-star>
+            </td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm"
+                      *ngIf="isAdmin()"
+                      [routerLink]="['/courses', course.id, 'edit']">
+                Edit
+              </button>
+            <!-- </td> -->
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="pageChanged($event)" previousLabel="Previous" nextLabel="Next"></pagination-controls>
+    </div>
+
+  </div>
+</div>
+
+ <!--<div>
+  <button class="btn btn-outline-primary btn-sm"
+                      [routerLink]="['/courses/0/edit']">
+                Add  New Course
+              </button>
+</div> -->
+
+<div *ngIf="errorMessage"
+     class="alert alert-danger">
+  Error: {{ errorMessage }}
+</div>

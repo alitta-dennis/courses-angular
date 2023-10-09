@@ -1,0 +1,26 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox to align items horizontally */
+  }
+  
+  /* /Move the last item to the right
+  nav li:last-child { 
+     margin-left: auto; /Push the last item to the right
+  }  */
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
