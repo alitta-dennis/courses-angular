@@ -62,15 +62,20 @@
         </button>
 
         
-            <button class="btn btn-outline-secondary mr-3"
+            <!--<button class="btn btn-outline-secondary mr-3"
                     style="width:160px"
                     (click)="courseInfo.id && add(courseInfo.id)">
                Add to cart
-            </button>
-        <button class="btn btn-outline-primary"
+            </button>-->
+        <!--<button class="btn btn-outline-primary"
                 style="width:80px"
                 [routerLink]="['/courses', courseInfo.id, 'edit']">
           Edit
+        </button>-->
+        <button class="btn btn-outline-primary"
+                style="width:160px"
+                    (click)="courseInfo.id && add(courseInfo.id)">
+               Add to cart
         </button>
       </div>
     </div>

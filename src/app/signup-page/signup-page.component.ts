@@ -66,7 +66,11 @@ export class SignupPageComponent {
                 this.router.navigate(["login"]);
               },
               error: (err) => {
-                alert("Error in sign-up!");
+                if(err.status===409){
+                  alert('User already exists!!')
+                }
+                else{
+                alert("Error in sign-up!");}
               }
             });
           }

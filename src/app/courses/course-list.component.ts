@@ -64,7 +64,7 @@ export class CourseListComponent implements OnInit {
     this.showImage = !this.showImage;
   }
   current=1;
-  size=10;
+  size=5;
   total=0;
   ngOnInit(): void {
     this.loadPage(this.current);

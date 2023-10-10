@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
 
   email: string|undefined;
   courses:course[]=[];
+  amount:number=0;
   
 
 
@@ -41,6 +42,7 @@ export class CartComponent implements OnInit {
     this.http.get<any>("http://127.0.0.1:8000/api/cart/view",{headers}).subscribe(data=>{
       this.email=data.email;
       this.courses=data.courses;
+      this.amount=data.amount;
     });
   }
 

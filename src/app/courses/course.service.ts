@@ -16,7 +16,7 @@ import { AuthService } from '../auth.service';
 export class CourseService {
   // private coursesUrl = 'http://localhost:3000/coursesList'; // JSON Server endpoint
   private coursesUrl = 'http://127.0.0.1:8000/api/courses';
-  private editUrl='http://127.0.0.1:8000/courses/img';
+  private editUrl='http://127.0.0.1:8000/api/courses/img';
   //private adminUrl='http://127.0.0.1:8000/admin';
   constructor(private http: HttpClient,private authService:AuthService) { }
 

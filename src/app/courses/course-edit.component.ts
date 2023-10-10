@@ -146,6 +146,7 @@ export class CourseEditComponent implements OnInit, AfterViewInit, OnDestroy {
        starRating: this.Course.starRating,
        startDate: this.Course.startDate,
       price: this.Course.price,
+      category: this.Course.category,
       imageUrl: this.Course.imageUrl,
     });
   
