@@ -11,12 +11,14 @@
 <div class="container-cart">
     <div class="course-card" *ngFor ="let course of courses">
         <div class="details" *ngIf="course.courseName && course.price && course.startDate">
-            <h5>Course Name: {{course.courseName}}  </h5>
-            <h5>Price: $ {{course.price}}</h5>
-            <h5>Start Date: {{course.startDate}}</h5>
+            <h6>Course Name: {{course.courseName}}  </h6>
+            <h6>Price: $ {{course.price}}</h6>
+            <h6>Start Date: {{course.startDate}}</h6>
             <button class="btn btn-outline-danger"
                     style="width:80px"
                     (click)='remove(course.id)'>Delete</button>
+                    <br>
+                    <hr>
               <!--<button class="btn btn-outline-primary"
                 style="width:80px"
                 [routerLink]="['/courses', courseInfo.id, 'edit']">
